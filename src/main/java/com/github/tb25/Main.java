@@ -4,14 +4,32 @@ package com.github.tb25;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
+            int[] sortedArr = {1, 3, 7, 8, 2, 4, 5, 6};
+            Main m = new Main();
+            m.mergeSort(sortedArr);
+            for(int r :  sortedArr){
+                System.out.print(r);
+            }
+
+    }
+
+    public int[] mergeSort(int[] sortArr) {
+
+        mergeSortHelper(sortArr, 0 , sortArr.length - 1);
+        return sortArr;
+    }
+
+    public void mergeSortHelper(int[] arr, int l, int r) {
+        if(l < r){
+            int m = (l + r) / 2;
+            mergeSortHelper(arr, l, m);
+            mergeSortHelper(arr, m + 1, r);
+
         }
+    }
+
+    public void merge(){
+
     }
 }
