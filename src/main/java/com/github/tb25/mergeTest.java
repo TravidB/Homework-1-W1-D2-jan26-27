@@ -5,6 +5,7 @@ import static org.junit.jupiter.api.Assertions.*;
 public class mergeTest {
     Main m = new Main();
 
+    //Junits that only do simple cases such as repeated
     @Test
     void testMerge1() {
         int [] a = {1, 2, 3};
