@@ -11,6 +11,7 @@ public class Main {
         m.mergeArray(sortArr1, sortArr2);
     }
 
+    //merge that does three whiles, one for comparison, two/three for leftovers
     public int[] mergeArray(int[] sortArr1, int[] sortArr2) {
         int[] mergeArr = new int[sortArr1.length + sortArr2.length];
         int i = 0;
